@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CountryRecycle</string>
+    <string name="from_grid">from grid</string>
+    <string name="grid_check">Checked</string>
+    <string name="liear_checkbox">Checked</string>
+    <string name="grid">Grid</string>
+    <string name="linear">Linear</string>
+    <string name="grid_numbers">Grid Numbers</string>
+    <string name="name">Name</string>
+</resources>
