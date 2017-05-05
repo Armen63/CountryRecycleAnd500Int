@@ -12,6 +12,8 @@ import com.example.countryrecycle.MyApplication;
 import com.example.countryrecycle.R;
 import com.example.countryrecycle.model.Country;
 
+import static com.example.countryrecycle.R.drawable.flag_transparent;
+
 /**
  * Created by Armen on 5/5/2017.
  */
@@ -31,9 +33,12 @@ public class CountryGridHolder extends RecyclerView.ViewHolder {
 
     public void bind(Country country) {
         Context context = MyApplication.getContext();
-        int resourceId = context.getResources().getIdentifier("s_flag_" + country.getCode(), "drawable", context.getPackageName());
+        int resourceId = context.getResources().getIdentifier("s_flag_" + country.getCode().toLowerCase(), "drawable", context.getPackageName());
         if (resourceId > 0) {
             icon.setImageResource(resourceId);
+        }
+        else {
+            icon.setImageResource(flag_transparent);
         }
         nameTv.setText(nameTv != null ? country.getName() : "");
 

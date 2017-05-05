@@ -7,7 +7,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.example.countryrecycle.adapter.CountryGridAdapter;
 
-import static com.example.countryrecycle.LinearCountry.countries;
+import static com.example.countryrecycle.LinearCountry.countriesList;
 
 /**
  * Created by Armen on 5/5/2017.
@@ -27,7 +27,7 @@ public class GridCountry extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.main_grid_rv);
         gridLayoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
-        adapter = new CountryGridAdapter(countries);
+        adapter = new CountryGridAdapter(countriesList);
         recyclerView.setAdapter(adapter);
     }
 }

@@ -6,7 +6,6 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ScrollView;
 
 import com.example.countryrecycle.adapter.NumberGridAdapter;
 
@@ -22,7 +21,7 @@ public class GridNumbers extends AppCompatActivity implements View.OnClickListen
     private NumberGridAdapter adapter;
     private GridLayoutManager gridLayoutManager;
     private Button scrollDown, scrollUp;
-    private ScrollView scrollView;
+
 
     static List<Integer> numbers;
 
@@ -32,13 +31,13 @@ public class GridNumbers extends AppCompatActivity implements View.OnClickListen
             numbers.add(i);
         }
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recycle_numbers);
         scrollDown= (Button) findViewById(R.id.scrollDown);
         scrollUp = (Button) findViewById(R.id.scrollUp);
-        scrollView = (ScrollView) findViewById(R.id.scrollView);
 
         recyclerView = (RecyclerView) findViewById(R.id.main_grid_rv_numbers);
         gridLayoutManager = new GridLayoutManager(this, 3);

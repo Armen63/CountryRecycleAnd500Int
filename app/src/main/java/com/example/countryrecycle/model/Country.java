@@ -10,10 +10,15 @@ public class Country {
     private String code;
     private boolean isSelected;
 
+
     public Country(String name, String code, boolean isSelected) {
         this.name = name;
         this.code = code;
         this.isSelected = isSelected;
+    }
+
+    public Country() {
+
     }
 
 
